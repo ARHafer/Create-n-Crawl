@@ -71,7 +71,9 @@ public class TextBank {
                 list.append("North: ").append(north.getName());
 
                 if (north.getOtherRoom().isExplored()) {
-                    list.append(" (Leads to ").append(north.getOtherRoom().getName()).append(".)");
+                    list.append(" (Leads to ").append(north.getOtherRoom().getName()).append(".)\n");
+                } else {
+                    list.append("\n");
                 }
             }
 
@@ -80,7 +82,9 @@ public class TextBank {
                 list.append("South: ").append(south.getName());
 
                 if (south.getOtherRoom().isExplored()) {
-                    list.append(" (Leads to ").append(south.getOtherRoom().getName()).append(".)");
+                    list.append(" (Leads to ").append(south.getOtherRoom().getName()).append(".)\n");
+                } else {
+                    list.append("\n");
                 }
             }
 
@@ -89,7 +93,9 @@ public class TextBank {
                 list.append("East: ").append(east.getName());
 
                 if (east.getOtherRoom().isExplored()) {
-                    list.append(" (Leads to ").append(east.getOtherRoom().getName()).append(".)");
+                    list.append(" (Leads to ").append(east.getOtherRoom().getName()).append(".)\n");
+                } else {
+                    list.append("\n");
                 }
             }
 
@@ -98,7 +104,9 @@ public class TextBank {
                 list.append("West: ").append(west.getName());
 
                 if (west.getOtherRoom().isExplored()) {
-                    list.append(" (Leads to ").append(west.getOtherRoom().getName()).append(".)");
+                    list.append(" (Leads to ").append(west.getOtherRoom().getName()).append(".)\n");
+                } else {
+                    list.append("\n");
                 }
             }
 
@@ -110,10 +118,10 @@ public class TextBank {
      * Text that displays when the player encounters an error, such as typing an unrecognized command or performing an invalid action.
      */
     public static class ErrorText {
-        public static final String NO_DOOR = "\nThere isn't a door in that direction.\n";
+        public static final String NO_DOOR = "\nThere isn't a door in that direction.\n\n";
 
         public static String commandNotRecognized(String command) {
-            return "\n\"" + command + "\" is not a recognized command.\n";
+            return "\n\"" + command + "\" is not a recognized command.\n\n";
         }
     }
     

@@ -55,7 +55,10 @@ public class MapHandler extends DefaultHandler {
 
             case "player" -> {
                 player = new Player();
-                player.setRoom(currentRoom);
+
+                if (rooms.size() == 1) {
+                    player.setRoom(currentRoom);
+                }
             }
         }
     }

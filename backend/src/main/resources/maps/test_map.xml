@@ -1,0 +1,62 @@
+<xml version="1.0" encoding="UTF-8">
+
+<!-- A test map based off of Level 1 from the original LoZ. Most of it at least, this got boring quick. -->
+  <room name="Dungeon Entrance" description="Strange statues are scattered throughout the room. Some resemble fish, others dragons.">
+    <door direction="west" other_room="Room 1" name="Door 1"/>
+    <door direction="north" other_room="Room 2" name="Door 2"/>
+    <door direction="east" other_room="Room 3" name="Door 3"/>
+    <player/>
+  </room>
+
+  <room name="Room 1" description="A baren, open room.">
+    <door direction="east" other_room="Dungeon Entrance" name="Door 1"/>
+    <item name="Small Key"/>
+  </room>
+
+  <room name="Room 2" description="A large central pillar occupies the room."> <!-- I assume those blocks are supposed to be pillars... -->
+    <door direction="south" other_room="Dungeon Entrance" name="Door 2"/>
+    <door direction="north" other_room="Room 4" name="Door 4"/>
+  </room>
+
+  <room name="Room 3" description="Two large stone pillars divide the room.">
+    <door direction="west" other_room="Dungeon Entrance" name="Door 3"/>
+    <item name="Small Key"/>
+  </room>
+
+  <room name="Room 4" description="Four small pillars hold up the ceiling.">
+    <door direction="south" other_room="Room 2" name="Door 4"/>
+    <door direction="west" other_room="Room 5" name="Door 5"/>
+    <door direction="north" other_room="Room 6" name="Door 6"/>
+    <door direction="east" other_room="Room 7" name="Door 7"/>
+    <item name="Small Key"/>
+  </room>
+
+  <room name="Room 5" description="A large central pillar occupies the room... again.">
+    <door direction="east" other_room="Room 4" name="Door 5"/>
+    <door direction="north" other_room="Room 8" name="Door 8"/>
+  </room>
+
+  <room name="Room 6" description="Thick pillars scatter the room.">
+    <door direction="south" other_room="Room 4" name="Door 6"/>
+    <door direction="west" other_room="Room 8" name="Door 9"/>
+    <door direction="east" other_room="Room 9" name="Door 10"/>
+    <item name="Map"/>
+  </room>
+
+  <room name="Room 7" description="Four small pillars hold up the ceiling... again.">
+    <door direction="west" other_room="Room 4" name="Door 7"/>
+    <door direction="north" other_room="Room 9" name="Door 11"/>
+    <item name="Compass"/>
+  </room>
+
+  <room name="Room 8" description="A small pillar sits in toward center of the room. It looks flimsy."> <!-- It's pushable, so is this one a block? Or does Link push entire pillars without knocking them over somehow? -->
+    <door direction="south" other_room="Room 5" name="Door 8"/>
+    <door direction="east" other_room="Room 6" name="Door 9"/>
+  </room>
+
+  <room name="Room 9" description="Four small pillars hold up the ceiling... again... again.">
+    <door direction="west" other_room="Room 6" name="Door 10"/>
+    <door direction="south" other_room="Room 7" name="Door 11"/>
+  </room>
+
+</xml>
